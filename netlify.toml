@@ -1,0 +1,47 @@
+[build]
+  publish = "_site"
+  command = "eleventy"
+
+[[redirects]]
+  from = "https://brendon-resume-2021.netlify.app/*"
+  to = "https://www.brendonfolsom.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://trainedbyfusion.com/our-programs/"
+  to = "https://trainedbyfusion.com/programs/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://trainedbyfusion.com/group-training-crossfit/"
+  to = "https://trainedbyfusion.com/programs/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://trainedbyfusion.com/personal-training/"
+  to = "https://trainedbyfusion.com/programs/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://trainedbyfusion.com/nutrition/"
+  to = "https://trainedbyfusion.com/programs/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://trainedbyfusion.com/crossfit-kids/"
+  to = "https://trainedbyfusion.com/fusion-kids/"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "no-referrer"
+    X-Content-Type-Options = "nosniff"

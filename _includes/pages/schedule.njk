@@ -1,0 +1,24 @@
+<div class="bg-cover bg-no-repeat -mt-1 -ml-1 pt-12 pb-32 single-program-hero">
+    <div class="w-11/12 mx-auto">
+        <h1 class="text-5xl sm:text-6xl md:text-h1-init text-white text-center md:text-left">{{ wpage.title }}</h1>
+    </div>
+</div>
+
+<h6 class="pt-12 -mb-16 text-center">Our schedule is loading - please wait a few moments.</h6>
+<iframe src="https://app.wodify.com/Public/ClassCalendarEntry.aspx?TenantKey=846z7w8wn7&Location_Id=82&Program_Id=273,7828,18689,38623,49809,52715,56538,79341"  width="100%" height="1000px" style="max-width:100%;border:none;margin:auto;"></iframe>
+
+<div class="flex flex-wrap items-center justify-between max-w-8xl mx-auto pt-40 pb-24 px-16">
+    <h3 class="pb-6">Programs</h3>  
+    <div class="bg-fus-green w-80 h-1 -mt-6"></div>
+    {% for item in wpages %}
+        {% if item.template == "templates/single-program.php" %}
+            {% if item.title !== wpage.title %}
+            <a href="/{{ item.slug }}" class="pb-6 pr-6 gradient-link">
+                <h3>{{ item.title }}</h3>
+            </a>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+</div>
+
+{% include "../global/bottom-cta.njk" %}

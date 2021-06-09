@@ -1,0 +1,79 @@
+@import './_includes/css/utilities.scss';
+
+.home-program-slide {
+    max-width: 460px;
+}
+
+.home-program-slide .home-program-slide-img {
+    transition: .3s;
+}
+
+.home-program-slide:hover .home-program-slide-img {
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+.home-program-slide:hover .home-program-slide-img-overlay {
+    opacity: 100 !important;
+    transition: .3s;
+}
+
+.home-program-slide-img-overlay {
+    max-width: 460px;
+    background-color: rgba(13, 214, 60, 0.40);
+    transition: .3s;
+}
+
+.home-program-slider .flickity-viewport {
+    cursor: url('https://inside.trainedbyfusion.com/wp-content/uploads/2021/04/drag-slider-3.svg'), auto !important;
+}
+
+.testimonial-arrows {
+    clip-path: polygon(0 36%, 100% 86%, 100% 0);
+}
+
+.testimonial-texture-bk {
+    background-image: url('https://inside.trainedbyfusion.com/wp-content/uploads/2021/04/testimonial-pattern-bk.svg');
+}
+
+@media (min-width: $xs) {
+   
+}
+
+@media (min-width: $sm) {
+    
+}
+
+@media (min-width: $md) {
+    
+}
+
+@media (min-width: $lg) {
+    
+}
+
+@media (min-width: $xl) {
+    .home-about-section {
+        background-position-y: -50px;
+    }
+}
+
+@media (min-width: $xxl) {
+    
+}
+
+@media (min-width: 1650px) {
+    .home-about-section {
+        background-position-y: -200px;
+    }
+}
+
+@media (min-width: $xxxl) {
+    .home-about-section {
+        background-image: none !important;
+    }
+
+    .home-about-section h2 {
+        color: #0B141E !important;
+    }
+}

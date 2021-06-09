@@ -1,0 +1,171 @@
+<style>
+    
+</style>
+
+<div class="bg-cover bg-no-repeat -mt-1 -ml-1 pt-12 pb-40 single-program-hero">
+    <div class="w-11/12 mx-auto">
+        <h1 class="text-5xl sm:text-6xl md:text-h1-init text-white text-center md:text-left">{{ wpage.title }}</h1>
+    </div>
+</div>
+
+<div class="flex flex-wrap items-center w-full lg:w-11/12 max-w-8xl -mt-56 mx-auto text-center md:text-left">
+    <style>
+        .single-program-hero-image {
+            background-image: url('{{ item.singlePageHeroImg }}');
+            clip-path: polygon(0 0%, 100% 0, 100% 80%, 0% 100%);
+        }
+    </style>
+    <div data-aos="fade-down" data-aos-duration="1200" class="w-full lg:w-7/12 bg-top bg-cover bg-no-repeat py-32 lg:py-80 z-min1 single-program-hero-image">
+        <div class="py-32"></div>
+    </div>
+    <div class="w-full md:w-2/3 lg:w-5/12 mx-auto pt-8 lg:pt-0 px-6 xxl:px-16 single-program-hero-paragraph">
+        <h2 class="pb-6">{{ wpage.singlePageHeroTitle }}</h2>
+        <p class="pb-8 xs:px-8 sm:px-24 md:px-0 whitespace-pre-line lg-p">{{ wpage.singlePageHeroParagraph }}</p>
+        <div class="flex flex-wrap md:flex-no-wrap lg:flex-wrap xl:flex-no-wrap items-center">
+            <a href="{{ wpage.singlePageHeroFilledButtonLink }}" class="w-full lg:pr-6">
+                <button class="mb-8 md:mb-0 lg:mb-8 xl:mb-0 green-button">{{ wpage.singlePageHeroFilledButtonText }}</button>
+            </a>
+            <a href="{{ wpage.singlePageHeroTextButtonLink }}" class="w-full">
+                <button class="text-button">{{ wpage.singlePageHeroTextButtonText }}</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .inner-page-gallery {
+        background-image: url('https://inside.trainedbyfusion.com/wp-content/uploads/2021/04/inner-page-gallery-bk.png');
+    }
+    
+    {% for item in wpage.singlePageActivityImgs %}
+        .activity-img-{{ loop.index }} {
+            background-image: url('{{ item.url }}');
+        }
+    {% endfor %}
+</style>
+
+<div class="relative pt-16 lg:pt-0 mx-auto">
+    <div data-aos="zoom-in" data-aos-duration="800" class="absolute w-full lg:bg-contain bg-center bg-repeat-x bg-no-repeat py-80 z-min1 inner-page-gallery">
+        <div class="py-32"></div>
+    </div>
+    <div class="relative top-0 sm:w-7/12 max-w-6xl mx-auto z-10 mx-auto py-12">
+        <div class="flex flex-wrap w-full">
+            {% for item in wpage.singlePageActivityImgs %}
+                {% if loop.index < 3 %}
+                    <div id="gallery-img-{{ loop.index }}" class="w-full lg:w-1/2 bg-cover bg-center bg-no-repeat py-80 cursor-pointer z-min1 shadow-2xl activity-img activity-img-{{ loop.index }}">
+
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="flex flex-wrap lg:-mt-32">
+            {% for item in wpage.singlePageActivityImgs %}
+                {% if loop.index > 2 %}
+                    <div id="gallery-img-{{ loop.index }}" class="w-full lg:w-1/2 bg-cover bg-center bg-no-repeat py-80 cursor-pointer z-min1 shadow-2xl activity-img activity-img-{{ loop.index }}">
+
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div id="gallery-trig-1" class="absolute top-0 left-0 w-1/2 py-80 cursor-pointer"></div>
+        <div id="gallery-trig-2" class="absolute top-0 right-0 w-1/2 py-80 cursor-pointer"></div>
+        <div id="gallery-trig-3" class="absolute bottom-0 left-0 w-1/2 py-80 cursor-pointer"></div>
+        <div id="gallery-trig-4" class="absolute bottom-0 right-0 w-1/2 py-80 cursor-pointer"></div>
+    </div>
+</div>
+
+<script>
+    let galleryTrigOne = document.getElementById('gallery-trig-1');
+    let galleryTrigTwo = document.getElementById('gallery-trig-2');
+    let galleryTrigThree = document.getElementById('gallery-trig-3');
+    let galleryTrigFour = document.getElementById('gallery-trig-4');
+    let galleryImgOne = document.getElementById('gallery-img-1');
+    let galleryImgTwo = document.getElementById('gallery-img-2');
+    let galleryImgThree = document.getElementById('gallery-img-3');
+    let galleryImgFour = document.getElementById('gallery-img-4');
+    let allGalleryImgs = document.querySelectorAll('.activity-img');
+
+    galleryTrigOne.addEventListener('mouseover', e => {
+        galleryImgOne.classList.add('activity-img-hover');
+    });
+
+    galleryTrigOne.addEventListener('mouseleave', e => {
+        galleryImgOne.classList.remove('activity-img-hover');
+    });
+
+    galleryTrigTwo.addEventListener('mouseover', e => {
+        galleryImgTwo.classList.add('activity-img-hover');
+    });
+
+    galleryTrigTwo.addEventListener('mouseleave', e => {
+        galleryImgTwo.classList.remove('activity-img-hover');
+    });
+
+    galleryTrigThree.addEventListener('mouseover', e => {
+        galleryImgThree.classList.add('activity-img-hover');
+    });
+
+    galleryTrigThree.addEventListener('mouseleave', e => {
+        galleryImgThree.classList.remove('activity-img-hover');
+    });
+
+    galleryTrigFour.addEventListener('mouseover', e => {
+        galleryImgFour.classList.add('activity-img-hover');
+    });
+
+    galleryTrigFour.addEventListener('mouseleave', e => {
+        galleryImgFour.classList.remove('activity-img-hover');
+    });
+
+    galleryTrigOne.addEventListener('click', e => {
+        for (var i = 0; i < allGalleryImgs.length; i++) {
+            allGalleryImgs[i].classList.add('z-min1');
+            allGalleryImgs[i].classList.remove('activity-img-active');
+        }
+        galleryImgOne.classList.remove('z-min1');
+        galleryImgOne.classList.add('activity-img-active');
+    });
+
+    galleryTrigTwo.addEventListener('click', e => {
+        for (var i = 0; i < allGalleryImgs.length; i++) {
+            allGalleryImgs[i].classList.add('z-min1');
+            allGalleryImgs[i].classList.remove('activity-img-active');
+        }
+        galleryImgTwo.classList.remove('z-min1');
+        galleryImgTwo.classList.add('activity-img-active');
+    });
+
+    galleryTrigThree.addEventListener('click', e => {
+        for (var i = 0; i < allGalleryImgs.length; i++) {
+            allGalleryImgs[i].classList.add('z-min1');
+            allGalleryImgs[i].classList.remove('activity-img-active');
+        }
+        galleryImgThree.classList.remove('z-min1');
+        galleryImgThree.classList.add('activity-img-active');
+    });
+
+    galleryTrigFour.addEventListener('click', e => {
+        for (var i = 0; i < allGalleryImgs.length; i++) {
+            allGalleryImgs[i].classList.add('z-min1');
+            allGalleryImgs[i].classList.remove('activity-img-active');
+        }
+        galleryImgFour.classList.remove('z-min1');
+        galleryImgFour.classList.add('activity-img-active');
+    });
+</script>
+
+<div class="flex flex-wrap items-center justify-between max-w-8xl mx-auto py-24 px-16">
+    <h3 class="pb-6">Programs</h3>  
+    <div class="bg-fus-green w-80 h-1 -mt-6"></div>
+    {% for item in wpages %}
+        {% if item.template == "templates/single-program.php" %}
+            {% if item.title !== wpage.title %}
+            <a href="/{{ item.slug }}" class="pb-6 pr-6 gradient-link">
+                <h3>{{ item.title }}</h3>
+            </a>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+</div>
+
+{% include "../global/bottom-cta.njk" %}

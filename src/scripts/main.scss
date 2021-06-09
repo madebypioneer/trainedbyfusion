@@ -1,0 +1,89 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "@fortawesome/fontawesome-free/css/fontawesome.css";
+@import "flickity/css/flickity.css";
+@import "flickity-fade/flickity-fade.css";
+@import 'aos/dist/aos.css';
+@import './_includes/css/utilities.scss';
+@import './_includes/css/global.scss';
+@import './_includes/css/header.scss';
+@import './_includes/css/footer.scss';
+@import './_includes/css/homepage.scss';
+@import './_includes/css/inner-pages.scss';
+
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("http://localhost:8080/assets/fonts/fa-brands-400.woff2") format("woff2");
+}
+
+.fab {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400; 
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("http://localhost:8080/assets/fonts/fa-solid-900.woff2") format("woff2");
+}
+
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900; 
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modal__container {
+  max-height: 800px;
+}
+
+.modal__close {
+  background: transparent;
+  border: 0;
+}
+
+.micromodal-slide {
+  display: none;
+}
+
+.micromodal-slide.is-open {
+  display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+  animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__container {
+  animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+  animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__container {
+  animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+  will-change: transform;
+}

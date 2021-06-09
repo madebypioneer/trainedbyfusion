@@ -1,0 +1,27 @@
+---
+layout: base.njk
+pagination:
+    data: wpages
+    size: 1
+    alias: wpage
+eleventyComputed:
+  yoastHead: "{{ wpage.yoast|safe }}"
+permalink: /{{ wpage.slug }}/index.html
+---
+{%- for item in pagination.items %}
+    {% if item.template == "templates/single-program.php" %}
+        {% include "pages/single-program.njk" %}
+    {% elseif item.template == "templates/programs.php" %}
+        {% include "pages/programs.njk" %}
+    {% elseif item.template == "templates/schedule.php" %}
+        {% include "pages/schedule.njk" %}
+    {% elseif item.template == "templates/about.php" %}
+        {% include "pages/about.njk" %}
+    {% elseif item.template == "templates/contact.php" %}
+        {% include "pages/contact.njk" %}
+    {% elseif item.template == "templates/members.php" %}
+        {% include "pages/members.njk" %}
+    {% elseif item.template == "templates/thank-you.php" %}
+        {% include "pages/thank-you.njk" %}
+    {% endif %}
+{% endfor -%}

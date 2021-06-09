@@ -1,0 +1,240 @@
+@import './_includes/css/utilities.scss';
+
+#header-container {
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+    align-items: center;
+    z-index: 999;
+    transition: .3s;
+}
+  
+#header-container.isSticky {
+   background-color: #182C44;
+    transition: .3s;
+}
+
+#header-container.isSticky .desktop-menu {
+    transition: .3s;
+}
+
+.site-logo {
+  
+}
+
+.site-mobile-logo {
+  
+}
+
+.desktop-menu-item {
+  font-family: 'revolution-gothic', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: -1px;
+  transition: color .3s;
+}
+
+.desktop-menu-item:hover {
+  color: #0DD63C;
+  border-bottom: 2px solid #0DD63C;
+  margin-bottom: -2px;
+  transition: color .3s;
+}
+
+.last-desktop-menu-item {
+  font-family: 'revolution-gothic', sans-serif;
+  background-color: white;
+  color: #0B141E;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 7px 20px 5px 20px;
+  transition: .3s;
+}
+
+.last-desktop-menu-item:hover {
+    border-width: 0px;
+    color: #0B141E;
+    margin: 0px;
+}
+
+.mobile-menu-icon {
+  padding-bottom: 30px;
+  z-index: 999999999999;
+}
+
+.mobile-menu-close {
+  background-color: rgba(24, 44, 68, 0.7);
+}
+
+.mobile-menu-single {
+  font-family: 'revolution-gothic', sans-serif;
+  color: #0B141E;
+  font-size: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.last-mobile-menu-single {
+  font-family: 'revolution-gothic', sans-serif;
+  color: #0B141E;
+  font-size: 20px;
+}
+
+.mobile-icon-active {
+  transform: rotate(180deg);
+  color: #CC5500;
+}
+
+.mobile-menu {
+  z-index: 998;
+}
+
+.mobile-menu-collaspe {
+  visibility: hidden;
+}
+
+.mobile-items {
+  background-color: white;
+  transition: .8s;
+  z-index: 998;
+}
+
+.mobile-items-collaspe {
+  transform: translateY(150%);
+  transition: .8s;
+}
+
+.mobile-menu-close {
+  transition: .9s;
+  z-index: 998;
+}
+
+.mobile-menu-close-collaspe {
+  transform: translateY(-150%);
+  transition: .9s;
+}
+
+.mobile-menu address {
+  font-family: 'neue-haas-grotesk-text', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: rgba(24, 44, 68, 0.70);
+  text-transform: capitalize;
+}
+
+.mobile-tele {
+  font-family: 'neue-haas-grotesk-text', sans-serif;
+  font-weight: 600;
+  color: rgba(24, 44, 68, 0.70);
+}
+
+.mobile-hours {
+  font-family: 'neue-haas-grotesk-text', sans-serif;
+  font-weight: 600;
+  color: rgba(24, 44, 68, 0.70);
+  text-transform: capitalize;
+}
+
+.main-menu__item {
+
+}
+
+.main-menu__item:last-child {
+
+}
+
+.main-menu__item:last-child:hover {
+    
+}
+
+.mobile-menu {
+    position: fixed;
+    z-index: 99999;
+}
+
+.mobile-menu__item {
+
+}
+
+.mobile-menu__item:last-child {
+
+}
+
+.mobile-menu__item:last-child:hover {
+    
+}
+
+.mobile-menu__logo {
+    
+}
+
+.mobile-menu__logo-box {
+    
+}
+
+.mobile-menu__item-box {
+    
+}
+
+.mobile-menu__menu-item {
+    
+}
+
+.header-menu-dropdown {
+  opacity: 0;
+  max-height: 0px;
+  max-width: 0px;
+  position: absolute;
+  min-width: 250px;
+  background-color: white;
+  text-align: left;
+  padding: 0px;
+  margin: 0px -15px 0 -20px;
+  overflow: hidden;
+}
+
+.show-dropdown {
+  opacity: 100 !important;
+  max-height: 500px;
+  max-width: 250px;
+  padding: 0px 0px 0px 0px;
+  transition: max-height 1s, padding-top .8s, padding-bottom .8s;
+}
+
+@media (min-width: $xs) {
+   
+}
+
+@media (min-width: $sm) {
+    
+}
+
+@media (min-width: $md) {
+  
+}
+
+@media (min-width: $lg) {
+  .desktop-menu-item {
+    font-size: 22px;
+  }
+  .last-desktop-menu-item {
+    font-size: 22px;
+    
+  }
+}
+
+@media (min-width: $xl) {
+  .last-desktop-menu-item {
+    padding: 7px 50px 5px 50px;
+  }
+}
+
+@media (min-width: $xxl) {
+    
+}
+
+@media (min-width: $xxxl) {
+    
+}

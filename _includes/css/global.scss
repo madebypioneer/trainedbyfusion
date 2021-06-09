@@ -1,0 +1,401 @@
+@import './_includes/css/utilities.scss';
+
+html {
+  
+}
+
+body {
+    
+}
+
+h1 {
+    font-family: 'revolution-gothic', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #182C44;
+    letter-spacing: 0px;
+    line-height: 1;
+}
+
+.h1-styled {
+    font-family: 'revolution-gothic', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #182C44;
+    letter-spacing: 0px;
+    line-height: 1;
+}
+
+h2 {
+    font-family: 'revolution-gothic', sans-serif;
+    font-size: 52px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #182C44;
+    letter-spacing: 0px;
+    line-height: 1;
+}
+
+.h2-styled {
+    font-family: 'revolution-gothic', sans-serif;
+    font-size: 52px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #182C44;
+    letter-spacing: 0px;
+    line-height: 1;
+}
+
+h3 {
+    font-family: 'revolution-gothic', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #182C44;
+    letter-spacing: 0px;
+    line-height: 1;
+}
+
+.h3-styled {
+    font-family: 'revolution-gothic', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #182C44;
+    letter-spacing: 0px;
+    line-height: 1;
+}
+
+h4 {
+    font-family: 'revolution-gothic', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #182C44;
+    letter-spacing: 0px;
+    line-height: 1;
+}
+
+.h4-styled {
+    font-family: 'revolution-gothic', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #182C44;
+    letter-spacing: 0px;
+    line-height: 1;
+}
+
+h5 {
+    font-family: 'revolution-gothic', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #182C44;
+    letter-spacing: 0px;
+    line-height: 1;
+}
+
+.h5-styled {
+    font-family: 'revolution-gothic', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #182C44;
+    letter-spacing: 0px;
+    line-height: 1;
+}
+
+h6 {
+    font-family: 'revolution-gothic', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #182C44;
+    letter-spacing: 0px;
+    line-height: 1;
+}
+
+.h6-styled {
+    font-family: 'revolution-gothic', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #182C44;
+    letter-spacing: 0px;
+    line-height: 1;
+}
+
+.sub-head {
+    font-family: 'revolution-gothic', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #182C44;
+    letter-spacing: 1px !important;
+}
+
+.tag {
+    font-family: 'revolution-gothic', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    font-family: 'neue-haas-grotesk-text', sans-serif;
+    font-size: 16px;
+    color: #182C44;
+    letter-spacing: 0.5px;
+}
+
+.lg-p {
+    font-family: 'neue-haas-grotesk-text', sans-serif;
+    font-size: 18px;
+    color: #182C44;
+}
+
+.sm-p {
+    font-family: 'neue-haas-grotesk-text', sans-serif;
+    font-size: 14px;
+    color: #182C44;
+    letter-spacing: 1px;
+}
+
+a {
+  color: #335D8F;
+}
+
+a:hover {
+    opacity: 0.75;
+}
+
+.gradient-link:hover {
+    background: rgb(24,44,68);
+    background: linear-gradient(180deg, rgba(24,44,68,1) 0%, rgba(13,214,60,1) 100%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    opacity: 1;
+}
+
+button {
+    font-family: 'revolution-gothic', sans-serif;
+    background-color: #0B141E;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 5px 35px 3px 35px;
+    transition: .3s;
+}
+
+button:hover {
+    background-color: #25446A;
+    transition: .3s;
+}
+
+.lg-button {
+    padding: 7px 50px 5px 50px;
+}
+
+.green-button {
+    background-color: #0DD63C;
+    color: #0B141E;
+}
+
+.green-button:hover {
+    background-color: #54F57A;
+}
+
+.teal-button {
+    background-color: #AFE2D3;
+    color: #0B141E;
+}
+
+.teal-button:hover {
+    background-color: #8AD4BE;
+}
+
+.outline-navy-button {
+    background-color: #ffffff;
+    box-shadow:inset 0px 0px 0px 1px #0B141E;
+    color: #0B141E;
+}
+
+.outline-navy-button:hover {
+    background-color: #0B141E;
+    color: #ffffff;
+}
+
+.outline-teal-button {
+    background-color: transparent;
+    box-shadow:inset 0px 0px 0px 1px #AFE2D3;
+    color: #AFE2D3;
+}
+
+.outline-teal-button:hover {
+    background-color: #AFE2D3;
+    color: #0B141E;
+}
+
+.text-button {
+    background-color: transparent;
+    color: #0B141E;
+    padding: 0px 0px 0px 0px;
+}
+
+.text-button:hover {
+    color: #0DD63C;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+ul {
+    
+}
+
+ol {
+    
+}
+
+li {
+    
+}
+
+address {
+    font-family: 'revolution-gothic', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-style: normal;
+}
+
+blockquote {
+    font-family: 'revolution-gothic', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #182C44;
+    letter-spacing: 1px !important;
+    line-height: 1;
+}
+
+code {
+
+}
+
+label {
+    font-family: 'neue-haas-grotesk-text', sans-serif;
+    font-size: 14px;
+    color: #182C44;
+    letter-spacing: 0.5px;
+}
+
+input {
+    font-family: 'neue-haas-grotesk-text', sans-serif;
+    box-shadow:inset 0px 0px 0px 1px #0B141E;
+    font-size: 12px;
+    color: #0B141E;
+    padding: 12px;
+}
+
+input::placeholder {
+  
+}
+
+textarea {
+    font-family: 'neue-haas-grotesk-text', sans-serif;
+    box-shadow:inset 0px 0px 0px 1px #0B141E;
+    font-size: 12px;
+    color: #0B141E;
+    padding: 12px;
+}
+
+textarea::placeholder {
+  
+}
+
+select {
+    font-family: 'neue-haas-grotesk-text', sans-serif;
+    box-shadow:inset 0px 0px 0px 1px #0B141E;
+    font-size: 12px;
+    color: #0B141E;
+    padding: 12px;
+}
+
+input[type="submit"] {
+    font-family: 'revolution-gothic', sans-serif;
+    background-color: #0B141E;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 7px 50px 7px 50px;
+    transition: .3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #25446A;
+    cursor: pointer;
+    transition: .3s;
+}
+
+img {
+  
+}
+
+.cus-shadow {
+    box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.25);
+}
+
+.footer-email {
+    font-family: 'revolution-gothic', sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-tele {
+    font-family: 'revolution-gothic', sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (min-width: $xs) {
+    
+}
+
+@media (min-width: $sm) {
+    
+}
+
+@media (min-width: $md) {
+    
+}
+
+@media (min-width: $lg) {
+    
+}
+
+@media (min-width: $xl) {
+    
+}
+
+@media (min-width: $xxl) {
+    
+}
+
+@media (min-width: $xxxl) {
+    
+}

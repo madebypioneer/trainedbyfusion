@@ -1,0 +1,70 @@
+<style>
+    .contact-page-address {
+        font-family: 'neue-haas-grotesk-text', sans-serif !important;
+        font-size: 18px !important;
+        font-weight: 400 !important;
+        color: #182C44 !important;
+        text-transform: none !important;
+    }
+</style>
+
+<div class="bg-cover bg-no-repeat -mt-1 -ml-1 pt-20 pb-32 single-program-hero">
+    <div class="w-11/12 mx-auto">
+        <h1 class="text-5xl sm:text-6xl md:text-h1-init text-white text-center md:text-left">{{ wpage.title }}</h1>
+    </div>
+</div>
+
+<div class="flex flex-wrap flex-col-reverse lg:flex-row lg:max-w-4xl xl:max-w-7xl xxl:mt-12 mx-auto pt-12 md:pt-0">
+    <form class="flex flex-wrap w-11/12 lg:w-1/2 mx-auto lg:pr-10 xl:pr-24">
+        <div class="md:flex w-full">
+            <input class="w-full md:w-1/2 mb-5 mr-3" type="text" name="first-name" placeholder="First Name*">
+            <input class="w-full md:w-1/2 mb-5 mr-3" type="text" name="last-name" placeholder="Last Name*">
+        </div>
+        <div class="md:flex w-full">
+            <input class="w-full md:w-1/2 mb-6 mr-3" type="email" name="email" placeholder="Email*">
+            <input class="w-full md:w-1/2 mb-6 mr-3" type="tel" name="phone" placeholder="Phone Number*">
+        </div>
+        <textarea class="w-full h-32 mb-6 md:mr-3" name="message" placeholder="Message*"></textarea>
+        <input class="w-full md:w-auto ml-auto md:mr-3" type="submit" value="Submit" />
+    </form>
+    
+    <div class="sm:flex w-11/12 lg:w-1/2 mx-auto pb-16">
+        <div class="pb-10 md:pb-0 pr-20 lg:pr-12 xl:pr-20">
+            <address class="contact-page-address">
+                {% for item in global.siteAddresses[0].acf.value_list %}{% if item.type == 'Primary' %}{{ item.street }}
+                <br />
+                {{ item.city }}, {{ item.state }} {{ item.zip }}
+                {% endif %}{% endfor %}
+            </address>
+            <a href="https://g.page/trainedbyfusion?share">
+                <p class="lg-p">Get Directions</p>
+            </a>
+            <div class="py-4"></div>
+            <a class="" href='mailto:{% for item in global.siteEmail[0].acf.value_list %}{% if item.type == "Primary" %}{{ item.value }}{% endif %}{% endfor %}'>
+                {% for item in global.siteEmail[0].acf.value_list %}{% if item.type == "Primary" %}<p class="lg-p">{{ item.value }}</p>{% endif %}{% endfor %}
+            </a>
+            <a class="" href='tel:{% for item in global.sitePhone[0].acf.value_list %}{% if item.type == "Primary" %}{{ item.value }}{% endif %}{% endfor %}'>
+                {% for item in global.sitePhone[0].acf.value_list %}{% if item.type == "Primary" %}<p class="lg-p">{{ item.value }}</p>{% endif %}{% endfor %}
+            </a>
+        </div>
+        <div class="">
+            <p class="lg-p">Mon-Thurs: {% for item in global.businessHours[0].acf.value_list %}{% if item.days == "Monday - Thursday" %}{{ item.open }} - {{ item.close }}{% endif %}{% endfor %}</p>
+            <p class="lg-p">Fri: {% for item in global.businessHours[0].acf.value_list %}{% if item.days == "Friday" %}{{ item.open }} - {{ item.close }}{% endif %}{% endfor %}</p>
+            <p class="lg-p">Sat: {% for item in global.businessHours[0].acf.value_list %}{% if item.days == "Saturday" %}{{ item.open }} - {{ item.close }}{% endif %}{% endfor %}</p>
+            <p class="lg-p">Sun: {% for item in global.businessHours[0].acf.value_list %}{% if item.days == "Sunday" %}{{ item.closed_for_days[0] }}{% endif %}{% endfor %}</p>
+        </div>
+    </div>
+</div>
+
+<div class="flex flex-wrap items-center justify-between w-11/12 max-w-6xl mx-auto py-24">
+    <h3>Follow Us on Social Media</h3>  
+    <div class="bg-fus-green w-5/12 h-1 mx-auto"></div>
+    <div class="text-lg">
+        <a href="{% for item in global.siteSocial[0].acf.value_list %}{% if item.type == 'Facebook' %}{{ item.value }}{% endif %}{% endfor %}" target="_blank">
+            <i class="text-fus-navy text-5xl p-5 fab fa-facebook-square"></i>
+        </a>
+        <a href="{% for item in global.siteSocial[0].acf.value_list %}{% if item.type == 'Instagram' %}{{ item.value }}{% endif %}{% endfor %}" target="_blank">
+          <i class="text-fus-navy text-5xl p-5 fab fa-instagram"></i>
+        </a>
+    </div>
+</div>

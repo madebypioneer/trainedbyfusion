@@ -1,0 +1,1 @@
+module.exports = { baseUrl: "https://inside.trainedbyfusion.com/", apiUrl: "https://inside.trainedbyfusion.com/wp-json/wp/v2", cacheInterval: '1m' };

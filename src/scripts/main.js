@@ -162,6 +162,7 @@ const homeProgramSliderCheck = document.getElementById('home-program-slider');
 const testimonialSliderCheck = document.getElementById('testimonial-slider');
 const eventSliderCheck = document.getElementById('event-slider');
 const valuesSliderCheck = document.getElementById('values-slider');
+const successStoriesSliderCheck = document.getElementById('success-stories-slider');
 
 if (homeProgramSliderCheck !== null) {
   let homeProgramSlider = new flickity( '#home-program-slider', {
@@ -231,6 +232,33 @@ if (valuesSliderCheck !== null) {
     let nextButton = nextTestButtons[i];
     nextButton.addEventListener( 'click', function() {
       valuesSlider.next( true );
+    });
+  }
+};
+
+if (successStoriesSliderCheck !== null) {
+  let successStoriesSlider = new flickity( '#success-stories-slider', {
+    prevNextButtons: false,
+    wrapAround: false,
+    pageDots: false,
+    freeScroll: false,
+    draggable: false,
+    fade: true,
+    cellAlign: "left"
+  });
+  let prevTestButtons = document.querySelectorAll(".prev-test-button");
+  for (var i = 0; i < prevTestButtons.length; i++) {
+    let prevButton = prevTestButtons[i];
+    prevButton.addEventListener( 'click', function() {
+      successStoriesSlider.previous( true );
+    });
+  }
+
+  let nextTestButtons = document.querySelectorAll(".next-test-button");
+  for (var i = 0; i < nextTestButtons.length; i++) {
+    let nextButton = nextTestButtons[i];
+    nextButton.addEventListener( 'click', function() {
+      successStoriesSlider.next( true );
     });
   }
 };

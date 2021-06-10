@@ -21,6 +21,8 @@ permalink: /{{ wpage.slug }}/index.html
         {% include "pages/contact.njk" %}
     {% elseif item.template == "templates/members.php" %}
         {% include "pages/members.njk" %}
+    {% elseif item.template == "templates/nutrition.php" %}
+        {% include "pages/nutrition.njk" %}
     {% elseif item.template == "templates/thank-you.php" %}
         {% include "pages/thank-you.njk" %}
     {% endif %}

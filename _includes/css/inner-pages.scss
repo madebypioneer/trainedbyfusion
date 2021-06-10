@@ -37,6 +37,11 @@
 //     z-index: 1;
 // }
 
+.how-it-works-section {
+    background-image: url('https://inside.trainedbyfusion.com/wp-content/uploads/2021/04/geo-bk-1.jpg');
+    background-size: 1800px;
+}
+
 @media (min-width: $xs) {
     
 }
@@ -63,6 +68,11 @@
     .activity-img-4 {
         background-position-y: -130px;
     }
+
+    .how-it-works-section {
+        background-image: url('https://inside.trainedbyfusion.com/wp-content/uploads/2021/04/geo-bk-1.jpg');
+        background-size: contain !important;
+    }
 }
 
 @media (min-width: $xl) {
@@ -85,6 +95,15 @@
     }
     .single-program-hero-paragraph {
         padding-top: 100px !important;
+    }
+    .how-it-works-section {
+        background-image: none;
+    }
+    .nutrition-how-title {
+        color: #182c44;
+    }
+    .nutrition-how-paragraph {
+        color: #182c44;
     }
 }
 

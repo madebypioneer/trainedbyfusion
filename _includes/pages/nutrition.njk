@@ -1,0 +1,163 @@
+<div class="bg-cover bg-no-repeat -mt-1 -ml-1 pt-12 pb-20 single-program-hero">
+    <div class="w-11/12 mx-auto">
+        <h1 class="text-5xl sm:text-6xl md:text-h1-init text-white text-center md:text-left">{{ wpage.title }}</h1>
+    </div>
+</div>
+
+<div class="flex flex-wrap items-center w-full lg:w-11/12 max-w-8xl -mt-32 mx-auto pb-40 text-center md:text-left overflow-x-hidden">
+    <style>
+        .nutrition-hero-image {
+            background-image: url('{{ wpage.heroImg }}');
+            clip-path: polygon(0 0%, 100% 0, 100% 80%, 0% 100%);
+        }
+    </style>
+    <div data-aos="fade-down" data-aos-duration="1200" class="w-full lg:w-7/12 bg-center bg-cover bg-no-repeat py-32 lg:py-80 z-min1 nutrition-hero-image">
+        <div class="py-32"></div>
+    </div>
+    <div class="w-full md:w-2/3 lg:w-5/12 xxl:mt-24 mx-auto pt-8 lg:pt-0 px-6 xxl:px-16 nutrition-hero-paragraph">
+        <h2 class="pb-6">{{ wpage.heroTitle }}</h2>
+        <p class="pb-8 xs:px-8 sm:px-24 md:px-0 whitespace-pre-line lg-p">{{ wpage.heroParagraph }}</p>
+    </div>
+</div>
+
+<style>
+ 
+</style>
+
+<div class="lg:bg-contain bg-top bg-no-repeat pt-16 pb-32 lg:pb-40 overflow-x-hidden how-it-works-section">
+    <div class="w-11/12 sm:w-5/6 mx-auto">
+        <h2 class="pb-4 text-4xl text-white text-center px-6 nutrition-how-title">{{ wpage.howItWorksTitle }}</h2>
+        <p class="max-w-3xl pb-12 text-white text-center mx-auto px-6 nutrition-how-paragraph">{{ wpage.howItWorksParagraph }}</p>
+    </div>
+    <div class="flex flex-wrap items-start md:w-5/6 lg:w-11/12 xl:w-5/6 max-w-8xl mx-auto lg:pt-12">
+        {% for item in wpage.howItWorksBoxes %}
+            <div data-aos="fade-left" {% if loop.index % 2 %}data-aos-duration="600"{% else %}data-aos-duration="800"{% endif %} class="flex flex-wrap w-11/12 lg:w-1/2 mx-auto pb-24 md:pb-12">
+                <style>
+                    .home-about-box-img-{{ loop.index }} {
+                        background-image: url('{{ item.image.url }}');
+                    }
+                </style>
+                <div class="flex flex-wrap w-11/12 mx-auto">
+                    <div class="w-full bg-cover bg-center mx-auto py-48 md:py-32 xl:py-56 cus-shadow home-about-box-img-{{ loop.index }}">
+                        
+                    </div>
+                </div>
+                <div class="w-11/12 mx-auto pt-8 text-center sm:text-left">
+                    <h3 class="pb-6">{{ item.title }}</h3>
+                    <p class="lg-p">{{ item.paragraph }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    .gradiant-icon-section {
+        background: rgb(51,93,143);
+        background: linear-gradient(342deg, rgba(51,93,143,1) 3%, rgba(0,45,62,1) 100%);
+    }
+</style>
+
+<div class="mb-32 pt-12 pb-24 overflow-x-hidden gradiant-icon-section">
+    <div class="flex flex-wrap items-start w-11/12 xl:w-5/6 max-w-8xl mx-auto pt-12 pb-6 px-4 md:mx-0 md:ml-16 xl:ml-32 xxl:ml-48 xxxl:mx-auto">
+        {% for item in wpage.iconBoxes %}
+            <style>
+                .why-member-icon-{{ item.icon.id }} {
+                    background-image: url('{{ item.icon.url }}');
+                }
+            </style>
+            <div data-aos="fade-left" {% if loop.index == 1 %}data-aos-duration="500"{% endif %} {% if loop.index == 2 %}data-aos-duration="750"{% endif %} {% if loop.index == 3 %}data-aos-duration="1000"{% endif %} {% if loop.index == 4 %}data-aos-duration="1250"{% endif %} class="w-full sm:w-1/2 lg:w-1/3 pb-12 lg:pb-0 md:pr-12 text-center md:text-left">
+                <div class="bg-contain bg-center md:bg-left bg-no-repeat py-8 why-member-icon-{{ item.icon.id }}"></div>
+                <h5 class="font-thin text-white pt-6 pb-3 membership-worth-it-title">{{ item.title }}</h5>
+                <p class="text-white">{{ item.paragraph }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="relative pb-56 overflow-x-hidden">
+    <div class="max-w-10xl mx-auto lg:px-16">
+        <style>
+            {% for item in wpage.successStories %}
+            .testimonial-img-{{ item.image.id }} {
+                background-image: url('{{ item.image.url }}');
+                clip-path: polygon(0 0, 100% 0, 100% 81%, 0% 100%);
+            }
+            {% endfor %}
+        </style>
+        <div id="success-stories-slider" class="relative w-full">
+            {% for item in wpage.successStories %}
+                <div class="flex flex-wrap w-full">
+                    <div data-aos="fade-right" data-aos-duration="1000" class="relative w-full md:w-1/2">
+                        <div class="w-full bg-cover bg-center py-56 testimonial-img-{{ item.image.id }}">
+            
+                        </div>
+                        <div class="absolute bottom-0 right-0 w-56 bg-fus-navy mr-6 py-10 xs:py-12 pl-10 pr-6 z-min1 testimonial-arrows">
+                            
+                        </div>
+                        <div class="absolute bottom-0 right-0 flex items-center mb-8 sm:mb-10 pr-10">
+                            <img class="text-2xl pl-24 pr-6 prev-test-button" src="https://inside.trainedbyfusion.com/wp-content/uploads/2021/04/slider-left-arrow-white.svg" />
+                            <img class="next-test-button" src="https://inside.trainedbyfusion.com/wp-content/uploads/2021/04/slider-right-arrow-white.svg" />
+                        </div>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="1000" class="w-full max-w-2xl md:w-1/2 mb-16 mx-auto pt-12 px-6 md:px-12 text-center md:text-left z-20">
+                        <h4 class="text-3xl xs:text-4xl xl:text-5xl pr-4 sm:pr-12">Success Stories</h4>
+                        <p class="pt-6">{{ item.story }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="absolute top-0 right-0 w-2/3 bg-contain bg-no-repeat bg-center -mt-16 py-72 z-min2 testimonial-texture-bk"></div>
+</div>
+
+<div class="md:bg-contain bg-top bg-no-repeat pt-16 pb-12 lg:pb-48 overflow-x-hidden how-it-works-section">
+    <h2 class="pb-4 text-white text-center px-6 nutrition-how-title">{{ wpage.pricingTitle }}</h2>
+    <div class="flex flex-wrap items-start md:w-5/6 lg:w-11/12 xl:w-5/6 max-w-8xl mx-auto lg:pt-12">
+        {% for item in wpage.pricingPackages %}
+            <div data-aos="fade-left" {% if loop.index % 2 %}data-aos-duration="600"{% else %}data-aos-duration="800"{% endif %} class="flex flex-wrap w-11/12 lg:w-1/3 mx-auto pb-12 overflow-x-hidden">
+                <div class="flex flex-wrap bg-white w-11/12 mx-auto p-8 cus-shadow">
+                    <h3 class="w-full text-3xl">{{ item.title | safe }}</h3>
+                    <h3 class="text-xl pb-6">{{ item.price }}</h3>
+                    <ul class="w-full list-disc font-neue-haas text-fus-navy ml-4">
+                        {% for item1 in item.details %}
+                        <li>{{ item1.detail }}</li>
+                        {% endfor %}
+                    </ul>
+                    <p class="w-full pt-6">All plans include:</p>
+                    <ul class="list-disc font-neue-haas text-fus-navy ml-4 pb-24">
+                        {% for item2 in wpage.pricingIncluded %}
+                        <li>{{ item2.detail }}</li>
+                        {% endfor %}
+                    </ul>
+                    <a href="/contact/" class="w-full text-center">
+                        <button>Sign Up</button>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div data-aos="fade-up" class="flex flex-wrap items-center justify-between w-11/12 max-w-6xl mx-auto pb-24 text-center">
+    <h3 class="w-full md:w-auto pb-6 lg:pb-0">{{ wpage.partnerTitle }}</h3>  
+    <div class="hidden lg:block bg-fus-green w-5/12 h-1 mx-auto"></div>
+    <div class="w-full md:w-auto">
+        <img class="mx-auto" src="{{ wpage.partnerImg }}" />
+    </div>
+</div>
+
+<style>
+    .bottom-cta-section {
+        background: rgb(13,214,60);
+        background: linear-gradient(140deg, rgba(13,214,60,1) 42%, rgba(7,118,33,1) 100%);
+    }
+</style>
+
+<div class="text-center py-16 bottom-cta-section">
+    <h5 class="max-w-3xl text-fus-dark mx-auto pb-3 px-2 h2-styled">{{ wpage.bottomCtaTitle }}</h5>
+    <p class="max-w-lg text-fus-dark mx-auto pb-8 px-2 lg-p">{{ wpage.bottomCtaParagraph }}</p>
+    <a href="{{ wpage.bottomCtaButtonLink }}">
+        <button>{{ wpage.bottomCtaButtonText }}</button>
+    </a>
+</div>

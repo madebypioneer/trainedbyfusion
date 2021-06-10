@@ -37,6 +37,34 @@ async function processPages(wpages) {
                     heroButtonText: wpage.acf.hero_section.button.text,
                     heroButtonLink: wpage.acf.hero_section.button.link
                 };
+            } else if (wpage.template == "templates/nutrition.php") {
+                return await {
+                    id: wpage.id,
+                    title: wpage.title.rendered,
+                    slug: wpage.slug,
+                    yoast: wpage.yoast_head,
+                    template: wpage.template,
+                    heroImg: wpage.acf.hero.image.url,
+                    heroImgAlt: wpage.acf.hero.image.alt,
+                    heroTitle: wpage.acf.hero.title,
+                    heroParagraph: wpage.acf.hero.paragraph,
+                    howItWorksTitle: wpage.acf.how_it_works.title,
+                    howItWorksParagraph: wpage.acf.how_it_works.paragraph,
+                    howItWorksBoxes: wpage.acf.how_it_works.boxes,
+                    howItWorksBottomParagraph: wpage.acf.how_it_works.bottom_paragraph,
+                    iconBoxes: wpage.acf.icon_section.icon_box,
+                    successStories: wpage.acf.success_stories,
+                    pricingTitle: wpage.acf.pricing_section.title,
+                    pricingPackages: wpage.acf.pricing_section.package,
+                    pricingIncluded: wpage.acf.pricing_section.all_plans_include.details,
+                    partnerTitle: wpage.acf.partner_section.title,
+                    partnerImg: wpage.acf.partner_section.image.url,
+                    partnerImgAlt: wpage.acf.partner_section.image.alt,
+                    bottomCtaTitle: wpage.acf.bottom_cta.title,
+                    bottomCtaParagraph: wpage.acf.bottom_cta.paragraph,
+                    bottomCtaButtonText: wpage.acf.bottom_cta.button.text,
+                    bottomCtaButtonLink: wpage.acf.bottom_cta.button.link
+                };
             } else if (wpage.template == "templates/about.php") {
                 return await {
                     id: wpage.id,

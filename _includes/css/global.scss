@@ -301,7 +301,7 @@ label {
 
 input {
     font-family: 'neue-haas-grotesk-text', sans-serif;
-    box-shadow:inset 0px 0px 0px 1px #0B141E;
+    border: 1px solid #0B141E;
     font-size: 12px;
     color: #0B141E;
     padding: 12px;
@@ -313,7 +313,7 @@ input::placeholder {
 
 textarea {
     font-family: 'neue-haas-grotesk-text', sans-serif;
-    box-shadow:inset 0px 0px 0px 1px #0B141E;
+    border: 1px solid #0B141E;
     font-size: 12px;
     color: #0B141E;
     padding: 12px;
@@ -325,7 +325,7 @@ textarea::placeholder {
 
 select {
     font-family: 'neue-haas-grotesk-text', sans-serif;
-    box-shadow:inset 0px 0px 0px 1px #0B141E;
+    border: 1px solid #0B141E;
     font-size: 12px;
     color: #0B141E;
     padding: 12px;

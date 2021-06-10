@@ -43,10 +43,10 @@ mobileMenuToggle.addEventListener('click', e => {
   mobileMenuItems.scrollTop = 0;
   mobileMenuClose.classList.toggle('mobile-menu-close-collaspe');
   if (e.target.getAttribute('status') == "closed") {
-    e.target.src = "https://res.cloudinary.com/animated-eagle/image/upload/v1617045409/greenZero/close-menu.svg";
+    e.target.src = "https://inside.trainedbyfusion.com/wp-content/uploads/2021/06/close-menu.png";
     e.target.setAttribute('status', 'open');
   } else {
-    e.target.src = "https://res.cloudinary.com/animated-eagle/image/upload/v1617045404/greenZero/open-menu.svg";
+    e.target.src = "https://inside.trainedbyfusion.com/wp-content/uploads/2021/06/open-menu.png";
     e.target.setAttribute('status', 'closed');
   }
   if (document.body.style.overflow == "hidden") {
@@ -62,7 +62,7 @@ mobileMenuClose.addEventListener('click', e => {
   mobileMenuItems.classList.toggle('mobile-items-collaspe');
   mobileMenuItems.scrollTop = 0;
   mobileMenuClose.classList.toggle('mobile-menu-close-collaspe');
-  mobileMenuToggle.src = "https://res.cloudinary.com/animated-eagle/image/upload/v1617045404/greenZero/open-menu.svg";
+  mobileMenuToggle.src = "https://inside.trainedbyfusion.com/wp-content/uploads/2021/06/open-menu.png";
   mobileMenuToggle.setAttribute('status', 'closed');
   enableBodyScroll('body');
 });
@@ -168,7 +168,6 @@ if (homeProgramSliderCheck !== null) {
     prevNextButtons: false,
     wrapAround: false,
     pageDots: false,
-    freeScroll: true,
     cellAlign: "left"
   });
 };
@@ -205,7 +204,6 @@ if (eventSliderCheck !== null) {
     prevNextButtons: false,
     wrapAround: false,
     pageDots: false,
-    freeScroll: true,
     cellAlign: "left"
   });
 };

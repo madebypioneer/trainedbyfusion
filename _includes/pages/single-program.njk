@@ -156,11 +156,11 @@
 
 <div class="flex flex-wrap items-center justify-between max-w-8xl mx-auto py-24 px-16">
     <h3 class="pb-6">Programs</h3>  
-    <div class="bg-fus-green w-80 h-1 -mt-6"></div>
+    <div class="bg-fus-green w-full lg:w-80 h-1 -mt-6"></div>
     {% for item in wpages %}
         {% if item.template == "templates/single-program.php" %}
             {% if item.title !== wpage.title %}
-            <a href="/{{ item.slug }}" class="pb-6 pr-6 gradient-link">
+            <a href="/{{ item.slug }}" class="w-full lg:w-auto pb-6 pr-6 gradient-link">
                 <h3>{{ item.title }}</h3>
             </a>
             {% endif %}

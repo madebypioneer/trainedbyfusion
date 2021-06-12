@@ -18,7 +18,7 @@
         <p class="pb-8 xs:px-8 sm:px-24 md:px-0 whitespace-pre-line lg-p">{{ wpage.heroParagraph }}</p>
         <div class="flex flex-wrap md:flex-no-wrap lg:flex-wrap xl:flex-no-wrap items-center">
             {% for item in wpage.resourcesButtons %}
-            <a href="{{ item.button_link }}" class="w-full lg:w-auto mx-auto md:pr-6" target="_blank">
+            <a href="{{ item.button_link }}" class="w-full lg:w-auto mx-auto md:pb-6 md:pr-6" target="_blank">
                 <button class="mb-8 md:mb-0 lg:mb-8 xl:mb-0 py-3 leading-none green-button">{{ item.button_text }}</button>
             </a>
             {% endfor %}

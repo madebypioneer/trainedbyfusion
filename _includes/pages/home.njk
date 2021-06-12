@@ -114,13 +114,28 @@
                         </div>
                     </div>
                     <div data-aos="fade-left" data-aos-duration="1000" class="w-full max-w-2xl md:w-7/12 mb-16 -ml-32 lg:-ml-2 pt-12 px-5 xs:px-0 z-20">
-                        <blockquote class="text-3xl xs:text-4xl xl:text-5xl pr-4 sm:pr-12">"{{ item.text | truncate(150) }}"</blockquote>
+                        <blockquote class="text-3xl xs:text-4xl xl:text-5xl pr-4 sm:pr-12 hover:bg-gray-100 hover:cursor-pointer testmonial-excerpt" data-micromodal-trigger="modal-{{ item.id }}">"{{ item.excerpt | truncate(150) }}"</blockquote>
                         <h6 class="pt-6 pr-48 xs:pr-56 lg:pr-10 xl:pr-24 text-center">- {{ item.name }}</h6>
                     </div>
                 </div>
                 {% endif %}
             {% endfor %}
         </div>
+        {% for item in testimonials %}
+            {% if item.disabled !== true %}
+            <div id="modal-{{ item.id }}" class="micromodal-slide">
+                <div class="relative w-full h-full items-center justify-center modal__overlay" tabindex="-1" data-micromodal-close>
+                    <i class="hidden xl:block absolute top-0 right-0 text-5xl text-fus-green mt-12 mr-8 hover:cursor-pointer fas fa-window-close" data-micromodal-close></i>
+                    <div class="w-11/12 md:w-5/6 bg-white mx-auto rounded-lg overflow-y-scroll pb-32 modal__container">
+                    <div class="text-center px-6">
+                        <p class="max-w-3xl mx-auto pt-6 text-left whitespace-pre-line">"{{ item.fullText }}"</p>
+                        <i class="xl:hidden w-full text-5xl text-fus-green text-center hover:cursor-pointer mt-12 fas fa-window-close" data-micromodal-close></i>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
     </div>
     <div class="absolute top-0 right-0 w-2/3 bg-contain bg-no-repeat bg-center -mt-16 py-72 z-min2 testimonial-texture-bk"></div>
 </div>

@@ -12,5 +12,16 @@
 
     {% include "footer.njk" %}
     <script src="{{ page | relative }}assets/js/main.js"></script>
+    <script>
+      function openModal() {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      
+      function closeModal() {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+    </script>
   </body>
 </html>

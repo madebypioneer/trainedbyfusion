@@ -4,13 +4,22 @@
             <img class="hidden md:block site-logo" src="{{ global.siteLogos[0].acf.logo.url }}" />
             <img class="md:hidden mx-auto site-mobile-logo" src="{{ global.siteLogos[0].acf.logo.url }}" />
         </a>
-        <ul class="hidden md:flex items-center w-auto">
+        <ul class="hidden md:flex relative items-center w-auto main-menu-items">
             {% for item in menus.mainMenu %}
             <a class="w-auto ml-auto {% if loop.last == false %}mr-8 xl:mr-12{% endif %}" href="{{ item.url }}">
                 <li class="relative desktop-menu-item {% if loop.last == true %}last-desktop-menu-item{% endif %}">
                     {{ item.title }}
                 </li>
             </a>
+                {% if item.children|length %}
+                    <ul class="top-0 bg-white border-2 header-menu-dropdown">
+                        {% for item in item.children %}
+                            <a href='{{ item.url }}'>
+                                <li class="p-3 select-none uppercase header-menu-children">{{ item.title | safe }}</li>
+                            </a>
+                            {% endfor %}
+                    </ul>
+                {% endif %}
             {% endfor %}
         </ul>
     </div>

@@ -187,12 +187,17 @@
   max-height: 0px;
   max-width: 0px;
   position: absolute;
-  min-width: 250px;
   background-color: white;
   text-align: left;
   padding: 0px;
   margin: 0px -15px 0 -20px;
   overflow: hidden;
+  font-family: 'revolution-gothic', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  transition: color .3s;
 }
 
 .show-dropdown {

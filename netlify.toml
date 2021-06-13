@@ -27,12 +27,6 @@
   force = true
 
 [[redirects]]
-  from = "https://trainedbyfusion.com/nutrition/"
-  to = "https://trainedbyfusion.com/programs/"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "https://trainedbyfusion.com/crossfit-kids/"
   to = "https://trainedbyfusion.com/fusion-kids/"
   status = 301

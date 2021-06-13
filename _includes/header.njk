@@ -1,5 +1,5 @@
 <header id="header-container" class="header-container">
-    <div class="flex flex-wrap items-center justify-between w-full {% if wpage.slug %}bg-fus-navy{% else %}bg-transparent{% endif %} py-8 px-6 lg:px-16">
+    <div class="flex flex-wrap items-center justify-between w-full {% if wpage.slug %}bg-fus-navy{% elseif wpage.title == '404' %}bg-fus-navy{% else %}bg-transparent{% endif %} py-8 px-6 lg:px-16">
         <a class="w-full md:w-1/3" href="/">
             <img class="hidden md:block site-logo" src="{{ global.siteLogos[0].acf.logo.url }}" />
             <img class="md:hidden mx-auto site-mobile-logo" src="{{ global.siteLogos[0].acf.logo.url }}" />

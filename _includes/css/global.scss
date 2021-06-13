@@ -376,6 +376,17 @@ img {
     transition: .3s;
 }
 
+.flickity-enabled {}; 
+.is-draggable {};
+.flickity-viewport {};
+.flickity-slider {};
+.is-selected {};
+.flickity-button {};
+.flickity-prev-next-button {};
+.previous {};
+.next {};
+.flickity-button-icon .arrow {};
+
 @media (min-width: $xs) {
     
 }

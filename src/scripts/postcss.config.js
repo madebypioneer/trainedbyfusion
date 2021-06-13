@@ -6,10 +6,10 @@ module.exports = {
     },
     'tailwindcss': ('./css-config.js'),
     'cssnano': {},
-    '@fullhuman/postcss-purgecss': {
-      content: ['./_includes/**/*.{scss,njk}', './scripts/**/*.{scss}'],
-      whitelistPatterns: [/[data-aos]/],
-      defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
-    },
+    // '@fullhuman/postcss-purgecss': {
+    //   content: ['./_includes/**/*.{scss,njk}', './scripts/**/*.{scss}'],
+    //   whitelistPatterns: [/[data-aos]/],
+    //   defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+    // },
 	}
 };

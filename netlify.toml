@@ -3,8 +3,8 @@
   command = "eleventy"
 
 [[redirects]]
-  from = "https://brendon-resume-2021.netlify.app/*"
-  to = "https://www.brendonfolsom.com/:splat"
+  from = "https://trainedbyfusion.netlify.app/*"
+  to = "https://www.trainedbyfusion.com/:splat"
   status = 301
   force = true
 

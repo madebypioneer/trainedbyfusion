@@ -130,8 +130,8 @@
                         <li>{{ item2.detail }}</li>
                         {% endfor %}
                     </ul>
-                    <a href="https://trainedbyfusion.wodify.com/OnlineSalesPortal/ReviewPlanPurchase.aspx?OnlineMembershipId=133031&OnlineMembershipPaymentOptionId=684397&IsMobile=False" target="_blank" class="w-full text-center">
-                        <button>Sign Up</button>
+                    <a href="{{ item.button.link }}" target="_blank" class="w-full text-center">
+                        <button>{{ item.button.text }}</button>
                     </a>
                 </div>
             </div>

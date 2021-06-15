@@ -167,8 +167,8 @@ const successStoriesSliderCheck = document.getElementById('success-stories-slide
 if (homeProgramSliderCheck !== null) {
   let homeProgramSlider = new flickity( '#home-program-slider', {
     prevNextButtons: false,
-    wrapAround: false,
-    pageDots: false,
+    wrapAround: true,
+    pageDots: true,
     cellAlign: "left"
   });
 };
@@ -203,8 +203,8 @@ if (testimonialSliderCheck !== null) {
 if (eventSliderCheck !== null) {
   let eventSlider = new flickity( '#event-slider', {
     prevNextButtons: false,
-    wrapAround: false,
-    pageDots: false,
+    wrapAround: true,
+    pageDots: true,
     cellAlign: "left"
   });
 };

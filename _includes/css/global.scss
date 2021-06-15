@@ -376,6 +376,12 @@ img {
     transition: .3s;
 }
 
+.flickity-page-dots .dot {
+    width: 40px;
+    height: 5px;
+    border-radius: 0px;
+}
+
 .flickity-enabled {}; 
 .is-draggable {};
 .flickity-viewport {};

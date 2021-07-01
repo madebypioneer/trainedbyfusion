@@ -1,0 +1,77 @@
+<style>
+    .price-details {
+        min-height: 80px;
+    }
+</style>
+
+<div class="bg-cover bg-no-repeat -mt-1 -ml-1 pt-12 pb-40 single-program-hero">
+    <div class="w-11/12 mx-auto">
+        <h1 class="text-5xl sm:text-6xl md:text-h1-init text-white text-center md:text-left">{{ wpage.title }}</h1>
+    </div>
+</div>
+
+<div class="flex flex-wrap items-center w-full lg:w-11/12 max-w-8xl -mt-16 md:-mt-48 mx-auto pb-40 text-center md:text-left overflow-x-hidden">
+    <style>
+        .nutrition-hero-image {
+            background-image: url('{{ wpage.heroImg }}');
+            clip-path: polygon(0 0%, 100% 0, 100% 80%, 0% 100%);
+        }
+    </style>
+    <div data-aos="fade-down" data-aos-duration="1200" class="w-full lg:w-7/12 bg-center bg-cover bg-no-repeat py-32 lg:py-80 z-min1 nutrition-hero-image">
+        <div class="py-32 md:py-80"></div>
+    </div>
+    <div class="w-full md:w-2/3 lg:w-5/12 xxl:mt-24 mx-auto pt-8 lg:pt-0 px-6 xxl:px-16 nutrition-hero-paragraph">
+        <h2 class="pb-6">{{ wpage.heroTitle }}</h2>
+        <p class="pb-8 xs:px-8 sm:px-24 md:px-0 whitespace-pre-line lg-p">{{ wpage.heroParagraph }}</p>
+    </div>
+</div>
+
+<style>
+
+</style>
+
+<div class="bg-cover bg-top bg-no-repeat pt-16 pb-32 lg:pb-56 overflow-x-hidden personal-training-bk">
+    <h2 class="pb-4 text-white text-center px-6 nutrition-how-title">{{ wpage.pricingTitle }}</h2>
+    <p class="max-w-3xl pb-12 text-white text-center mx-auto px-6 whitespace-pre-line nutrition-how-paragraph">{{ wpage.pricingParagraph | safe }}</p>
+    <div class="flex flex-wrap items-start md:w-5/6 lg:w-11/12 xl:w-5/6 max-w-8xl mx-auto lg:pt-12">
+        {% for item in wpage.pricingPackages %}
+            <div data-aos="fade-left" {% if loop.index % 2 %}data-aos-duration="600"{% else %}data-aos-duration="800"{% endif %} class="flex flex-wrap w-11/12 lg:w-1/2 xl:w-1/3 mx-auto pb-12 overflow-x-hidden">
+                <div class="flex flex-wrap bg-white w-11/12 mx-auto py-8 cus-shadow">
+                    <h3 class="w-full text-3xl font-bold text-center px-8">{{ item.title | safe }}</h3>
+                    <p class="w-full text-sm font-thin pt-4 pb-6 text-center leading-tight px-8">{{ item.subtitle }}</p>
+                    <ul class="w-full list-disc font-neue-haas text-fus-navy px-8">
+                        {% for item1 in item.price_details %}
+                        <div class="md:flex text-center md:text-left pb-8 md:pb-0">
+                            <div class="md:w-3/4 pb-2 md:pb-0 md:pr-12">
+                                {{ item1.title }}
+                            </div>
+                            <div class="md:w-1/4 price-details">
+                                <div class="font-bold">{{ item1.price }}</div>
+                                <div class="w-full text-xs">{{ item1.price_savings }}</div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </ul>
+                    <a href="{{ item.button.link }}" target="_blank" class="w-full text-center mt-8">
+                        <button>{{ item.button.text }}</button>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    .bottom-cta-section {
+        background: rgb(13,214,60);
+        background: linear-gradient(140deg, rgba(13,214,60,1) 42%, rgba(7,118,33,1) 100%);
+    }
+</style>
+
+<div class="text-center py-16 bottom-cta-section">
+    <h5 class="max-w-3xl text-fus-dark mx-auto pb-3 px-2 h2-styled">{{ wpage.bottomCtaTitle }}</h5>
+    <p class="max-w-lg text-fus-dark mx-auto pb-8 px-2 lg-p">{{ wpage.bottomCtaParagraph }}</p>
+    <a href="{{ wpage.bottomCtaButtonLink }}">
+        <button>{{ wpage.bottomCtaButtonText }}</button>
+    </a>
+</div>

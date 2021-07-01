@@ -65,6 +65,25 @@ async function processPages(wpages) {
                     bottomCtaButtonText: wpage.acf.bottom_cta.button.text,
                     bottomCtaButtonLink: wpage.acf.bottom_cta.button.link
                 };
+            } else if (wpage.template == "templates/personal-training.php") {
+                return await {
+                    id: wpage.id,
+                    title: wpage.title.rendered,
+                    slug: wpage.slug,
+                    yoast: wpage.yoast_head,
+                    template: wpage.template,
+                    heroImg: wpage.acf.hero.image.url,
+                    heroImgAlt: wpage.acf.hero.image.alt,
+                    heroTitle: wpage.acf.hero.title,
+                    heroParagraph: wpage.acf.hero.paragraph,
+                    pricingTitle: wpage.acf.pricing_section.title,
+                    pricingParagraph: wpage.acf.pricing_section.paragraph,
+                    pricingPackages: wpage.acf.pricing_section.package,
+                    bottomCtaTitle: wpage.acf.bottom_cta.title,
+                    bottomCtaParagraph: wpage.acf.bottom_cta.paragraph,
+                    bottomCtaButtonText: wpage.acf.bottom_cta.button.text,
+                    bottomCtaButtonLink: wpage.acf.bottom_cta.button.link
+                };
             } else if (wpage.template == "templates/about.php") {
                 return await {
                     id: wpage.id,

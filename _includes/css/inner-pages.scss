@@ -42,6 +42,10 @@
     background-size: 1800px;
 }
 
+.personal-training-bk {
+    background-image: url('https://inside.trainedbyfusion.com/wp-content/uploads/2021/04/geo-bk-1.jpg');
+}
+
 @media (min-width: $xs) {
     
 }
@@ -72,6 +76,10 @@
     .how-it-works-section {
         background-image: url('https://inside.trainedbyfusion.com/wp-content/uploads/2021/04/geo-bk-1.jpg');
         background-size: contain !important;
+    }
+
+    .personal-training-bk {
+        background-size: 1800px;
     }
 }
 
@@ -104,6 +112,9 @@
     }
     .nutrition-how-paragraph {
         color: #182c44;
+    }
+    .personal-training-bk {
+        background-image: none;
     }
 }
 

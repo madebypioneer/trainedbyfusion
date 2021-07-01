@@ -15,7 +15,7 @@
                     <ul class="top-0 bg-white border-2 header-menu-dropdown">
                         {% for item in item.children %}
                             <a href='{{ item.url }}'>
-                                <li class="p-3 select-none uppercase header-menu-children">{{ item.title | safe }}</li>
+                                <li class="p-3 leading-tight select-none uppercase header-menu-children">{{ item.title | safe }}</li>
                             </a>
                             {% endfor %}
                     </ul>

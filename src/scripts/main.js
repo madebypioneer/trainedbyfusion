@@ -266,11 +266,11 @@ if (successStoriesSliderCheck !== null) {
 let menuItems = document.querySelectorAll(".main-menu-items");
 
 for (var i = 0; i < menuItems.length; i++) {
-  menuItems[i].addEventListener( 'mouseover', function(e) {
+  menuItems[0].addEventListener( 'mouseover', function(e) {
     var dropdown = e.target.parentNode.parentNode.parentNode.querySelector(".header-menu-dropdown");
     dropdown.classList.add('show-dropdown');
   });
-  menuItems[i].addEventListener( 'mouseout', function(e) {
+  menuItems[0].addEventListener( 'mouseout', function(e) {
     var dropdown = e.target.parentNode.parentNode.parentNode.querySelector(".header-menu-dropdown");
     dropdown.classList.remove('show-dropdown');
   });

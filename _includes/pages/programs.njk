@@ -15,8 +15,8 @@
         </div>
     </div>
     <div class="w-full lg:w-1/2 max-w-xl mx-auto">
-        {% for item in wpages %}
-            {% if item.template == "templates/single-program.php" %}
+        {% for item in wpages | sortBy('weight') %}
+            {% if (item.template == "templates/single-program.php") or (item.template == "templates/nutrition.php") or (item.template == "templates/personal-training.php") %}
                 {% if item.weight == 1 %}
                 <div data-aos="fade-left" data-aos-duration="600" class="flex flex-wrap w-full">
                     <style>
@@ -44,8 +44,8 @@
 </div>
 
 <div class="flex flex-wrap w-full lg:w-11/12 max-w-8xl mx-auto text-center md:text-left py-20 lg:pl-20 lg:pr-12 overflow-x-hidden">
-        {% for item in wpages %}
-            {% if item.template == "templates/single-program.php" %}
+        {% for item in wpages | sortBy('weight') %}
+            {% if (item.template == "templates/single-program.php") or (item.template == "templates/nutrition.php") or (item.template == "templates/personal-training.php") %}
                 {% if item.weight > 1 %}
                 <div data-aos="fade-left" {% if loop.index % 2 %}data-aos-duration="800"{% else %}data-aos-duration="600"{% endif %} class="flex flex-wrap w-full lg:w-1/2 max-w-xl mx-auto pb-16">
                     <style>

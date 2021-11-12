@@ -63,7 +63,20 @@ async function processPages(wpages) {
                     bottomCtaTitle: wpage.acf.bottom_cta.title,
                     bottomCtaParagraph: wpage.acf.bottom_cta.paragraph,
                     bottomCtaButtonText: wpage.acf.bottom_cta.button.text,
-                    bottomCtaButtonLink: wpage.acf.bottom_cta.button.link
+                    bottomCtaButtonLink: wpage.acf.bottom_cta.button.link,
+                    homePageSliderImg: wpage.acf.homepage_slider_content.image.url,
+                    homePageSliderImgAlt: wpage.acf.homepage_slider_content.image.alt,
+                    homePageSliderTitle: wpage.acf.homepage_slider_content.title,
+                    homePageSliderParagraph: wpage.acf.homepage_slider_content.paragraph,
+                    homePageSliderButtonText: wpage.acf.homepage_slider_content.button.text,
+                    homePageSliderButtonLink: wpage.acf.homepage_slider_content.button.link,
+                    listingPageImg: wpage.acf.listing_page_content.image.url,
+                    listingPageImgAlt: wpage.acf.listing_page_content.image.alt,
+                    listingPageTitle: wpage.acf.listing_page_content.title,
+                    listingPageParagraph: wpage.acf.listing_page_content.paragraph,
+                    listingPageButtonText: wpage.acf.listing_page_content.button.text,
+                    listingPageButtonLink: wpage.acf.listing_page_content.button.link,
+                    weight: wpage.acf.listing_weight,
                 };
             } else if (wpage.template == "templates/personal-training.php") {
                 return await {
@@ -82,7 +95,20 @@ async function processPages(wpages) {
                     bottomCtaTitle: wpage.acf.bottom_cta.title,
                     bottomCtaParagraph: wpage.acf.bottom_cta.paragraph,
                     bottomCtaButtonText: wpage.acf.bottom_cta.button.text,
-                    bottomCtaButtonLink: wpage.acf.bottom_cta.button.link
+                    bottomCtaButtonLink: wpage.acf.bottom_cta.button.link,
+                    homePageSliderImg: wpage.acf.homepage_slider_content.image.url,
+                    homePageSliderImgAlt: wpage.acf.homepage_slider_content.image.alt,
+                    homePageSliderTitle: wpage.acf.homepage_slider_content.title,
+                    homePageSliderParagraph: wpage.acf.homepage_slider_content.paragraph,
+                    homePageSliderButtonText: wpage.acf.homepage_slider_content.button.text,
+                    homePageSliderButtonLink: wpage.acf.homepage_slider_content.button.link,
+                    listingPageImg: wpage.acf.listing_page_content.image.url,
+                    listingPageImgAlt: wpage.acf.listing_page_content.image.alt,
+                    listingPageTitle: wpage.acf.listing_page_content.title,
+                    listingPageParagraph: wpage.acf.listing_page_content.paragraph,
+                    listingPageButtonText: wpage.acf.listing_page_content.button.text,
+                    listingPageButtonLink: wpage.acf.listing_page_content.button.link,
+                    weight: wpage.acf.listing_weight,
                 };
             } else if (wpage.template == "templates/about.php") {
                 return await {

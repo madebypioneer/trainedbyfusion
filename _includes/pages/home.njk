@@ -25,7 +25,7 @@
         <div data-aos="fade-left" data-aos-duration="1000" class="w-11/12 md:w-2/3 mx-auto sm:mx-0 sm:ml-auto pt-20 md:pt-0">
             <div id="home-program-slider" class="relative home-program-slider">
                 {% for item in wpages | sortBy('weight') %}
-                {% if item.template == "templates/single-program.php" %}
+                {% if (item.template == "templates/single-program.php") or (item.template == "templates/nutrition.php") or (item.template == "templates/personal-training.php") %}
                 <div class="flex flex-wrap w-full home-program-slide">
                     <style>
                         .home-program-slide-img-{{ item.id }} {

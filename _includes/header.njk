@@ -7,7 +7,7 @@
         <ul class="hidden md:flex relative items-center w-auto main-menu-items">
             {% for item in menus.mainMenu %}
             <a class="w-auto ml-auto {% if loop.last == false %}mr-8 xl:mr-12{% endif %}" href="{{ item.url }}">
-                <li class="relative desktop-menu-item {% if loop.last == true %}last-desktop-menu-item{% endif %}">
+                <li class="relative desktop-menu-item {% if loop.first == true %}first-desktop-menu-item{% endif %} {% if loop.last == true %}last-desktop-menu-item{% endif %}">
                     {{ item.title }}
                 </li>
             </a>

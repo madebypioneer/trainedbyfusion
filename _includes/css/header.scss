@@ -208,6 +208,18 @@
   transition: max-height 1s, padding-top .8s, padding-bottom .8s;
 }
 
+.header-menu-children:hover {
+    background: rgb(24,44,68);
+    background: linear-gradient(180deg, rgba(24,44,68,1) 0%, rgba(13,214,60,1) 100%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    opacity: 1;
+}
+
 @media (min-width: $xs) {
    
 }

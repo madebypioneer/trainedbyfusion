@@ -263,15 +263,21 @@ if (successStoriesSliderCheck !== null) {
   }
 };
 
-let menuItems = document.querySelectorAll(".main-menu-items");
+let firstMenuItem = document.querySelector(".first-desktop-menu-item");
+let headerDropdown = document.querySelector(".header-menu-dropdown");
 
-for (var i = 0; i < menuItems.length; i++) {
-  menuItems[0].addEventListener( 'mouseover', function(e) {
-    var dropdown = e.target.parentNode.parentNode.parentNode.querySelector(".header-menu-dropdown");
-    dropdown.classList.add('show-dropdown');
-  });
-  menuItems[0].addEventListener( 'mouseout', function(e) {
-    var dropdown = e.target.parentNode.parentNode.parentNode.querySelector(".header-menu-dropdown");
-    dropdown.classList.remove('show-dropdown');
-  });
-}
+firstMenuItem.addEventListener( 'mouseover', function(e) {
+  headerDropdown.classList.add('show-dropdown');
+});
+
+headerDropdown.addEventListener( 'mouseover', function(e) {
+  headerDropdown.classList.add('show-dropdown');
+});
+
+firstMenuItem.addEventListener( 'mouseout', function(e) {
+  headerDropdown.classList.remove('show-dropdown');
+});
+
+headerDropdown.addEventListener( 'mouseout', function(e) {
+  headerDropdown.classList.remove('show-dropdown');
+});

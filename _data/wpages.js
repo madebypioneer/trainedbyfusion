@@ -2,7 +2,7 @@ const metaData = require('./metadata.js')
 const AssetCache = require("@11ty/eleventy-cache-assets");
 
 async function fetchPages() {
-    urlToCache = metaData.apiUrl + '/pages?_fields=id,title,slug,yoast_head,template,acf&per_page=100&exclude=13,17';
+    urlToCache = metaData.apiUrl + '/pages?_fields=id,title,modified,slug,yoast_head,template,acf&per_page=100&exclude=13,17';
     cacheInterval = metaData.cacheInterval;
     try {
         return AssetCache(
@@ -29,6 +29,7 @@ async function processPages(wpages) {
                 return await {
                     id: wpage.id,
                     title: wpage.title.rendered,
+                    modified: wpage.modified,
                     slug: wpage.slug,
                     yoast: wpage.yoast_head,
                     template: wpage.template,
@@ -41,6 +42,7 @@ async function processPages(wpages) {
                 return await {
                     id: wpage.id,
                     title: wpage.title.rendered,
+                    modified: wpage.modified,
                     slug: wpage.slug,
                     yoast: wpage.yoast_head,
                     template: wpage.template,
@@ -82,6 +84,7 @@ async function processPages(wpages) {
                 return await {
                     id: wpage.id,
                     title: wpage.title.rendered,
+                    modified: wpage.modified,
                     slug: wpage.slug,
                     yoast: wpage.yoast_head,
                     template: wpage.template,
@@ -114,6 +117,7 @@ async function processPages(wpages) {
                 return await {
                     id: wpage.id,
                     title: wpage.title.rendered,
+                    modified: wpage.modified,
                     slug: wpage.slug,
                     yoast: wpage.yoast_head,
                     template: wpage.template,
@@ -130,6 +134,7 @@ async function processPages(wpages) {
                 return await {
                     id: wpage.id,
                     title: wpage.title.rendered,
+                    modified: wpage.modified,
                     slug: wpage.slug,
                     yoast: wpage.yoast_head,
                     template: wpage.template,
@@ -143,6 +148,7 @@ async function processPages(wpages) {
                     return await {
                         id: wpage.id,
                         title: wpage.title.rendered,
+                        modified: wpage.modified,
                         slug: wpage.slug,
                         yoast: wpage.yoast_head,
                         template: wpage.template,
@@ -173,6 +179,7 @@ async function processPages(wpages) {
                     return await {
                         id: wpage.id,
                         title: wpage.title.rendered,
+                        modified: wpage.modified,
                         slug: wpage.slug,
                         yoast: wpage.yoast_head,
                         template: wpage.template,
@@ -204,6 +211,7 @@ async function processPages(wpages) {
                 return await {
                     id: wpage.id,
                     title: wpage.title.rendered,
+                    modified: wpage.modified,
                     slug: wpage.slug,
                     yoast: wpage.yoast_head,
                     template: wpage.template,
@@ -216,6 +224,7 @@ async function processPages(wpages) {
                 return await {
                     id: wpage.id,
                     title: wpage.title.rendered,
+                    modified: wpage.modified,
                     slug: wpage.slug,
                     yoast: wpage.yoast_head,
                     template: wpage.template,

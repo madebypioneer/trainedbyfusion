@@ -2,7 +2,7 @@ const metaData = require('./metadata.js')
 const AssetCache = require("@11ty/eleventy-cache-assets");
 
 async function fetchHomePage() {
-    urlToCache = metaData.apiUrl + '/pages?_fields=id,title,slug,yoast_head,template,acf&slug=home';
+    urlToCache = metaData.apiUrl + '/pages?_fields=id,title,modified,slug,yoast_head,template,acf&slug=home';
     cacheInterval = metaData.cacheInterval;
     try {
         return AssetCache(
@@ -22,6 +22,7 @@ async function processHomePage(homePage) {
     return await {
         id: homePage[0].id,
         title: homePage[0].title.rendered,
+        modified: homePage[0].modified,
         slug: homePage[0].slug,
         yoast: homePage[0].yoast_head,
         template: homePage[0].template,

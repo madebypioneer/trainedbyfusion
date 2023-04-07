@@ -2,13 +2,19 @@
 permalink: /sitemap.xml
 eleventyExcludeFromCollections: true
 ---
-<?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{%- for page in collections.all %}
-  {% set absoluteUrl %}{{ page.url | url | absoluteUrl(metadata.url) }}{% endset %}
-  <url>
-    <loc>{{ absoluteUrl }}</loc>
-    <lastmod>{{ page.date | htmlDateString }}</lastmod>
-  </url>
-{%- endfor %}
+<?xml version="1.0" encoding="UTF-8"?>
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+      <loc>{{ siteData.siteBaseUrl }}/</loc>
+      <lastmod>{{ homePage.modified | replace("Z", "") }}-05:00</lastmod>
+    </url>
+    {% for item in wpages %}
+      {% if (item.template == "templates/thank-you.php") or (item.template == "templates/404.php") or (item.template == "templates/home-page.php") %}
+      {% else %}
+      <url>
+        <loc>{{ siteData.siteBaseUrl }}/{{ item.slug }}/</loc>
+        <lastmod>{{ item.modified | replace("Z", "") }}-05:00</lastmod>
+      </url>
+      {% endif %}
+    {% endfor %}
 </urlset>

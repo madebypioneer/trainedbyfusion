@@ -1,6 +1,6 @@
 [build]
   publish = "_site"
-  command = "eleventy"
+  command = "npm run build"
 
 [[redirects]]
   from = "https://trainedbyfusion.netlify.app/*"

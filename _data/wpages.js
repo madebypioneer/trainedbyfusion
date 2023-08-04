@@ -36,7 +36,8 @@ async function processPages(wpages) {
                     heroTitle: wpage.acf.hero_section.title,
                     heroParagraph: wpage.acf.hero_section.paragraph,
                     heroButtonText: wpage.acf.hero_section.button.text,
-                    heroButtonLink: wpage.acf.hero_section.button.link
+                    heroButtonLink: wpage.acf.hero_section.button.link,
+                    weight: '999',
                 };
             } else if (wpage.template == "templates/nutrition.php") {
                 return await {
@@ -128,7 +129,8 @@ async function processPages(wpages) {
                     historyTitle: wpage.acf.history_section.title,
                     historyParagraph: wpage.acf.history_section.paragraph,
                     valuesList: wpage.acf.values_list.value,
-                    afterValuesBoxes: wpage.acf.after_values_boxes.boxes
+                    afterValuesBoxes: wpage.acf.after_values_boxes.boxes,
+                    weight: '999'
                 };
             } else if (wpage.template == "templates/members.php") {
                 return await {
@@ -141,7 +143,8 @@ async function processPages(wpages) {
                     heroImg: wpage.acf.hero.image.url,
                     heroImgAlt: wpage.acf.hero.image.alt,
                     heroParagraph: wpage.acf.hero.paragraph,
-                    resourcesButtons: wpage.acf.resource_button
+                    resourcesButtons: wpage.acf.resource_button,
+                    weight: '999'
                 };
             } else if (wpage.template == "templates/single-program.php") {
                 if (wpage.acf.listing_weight) {
@@ -173,7 +176,7 @@ async function processPages(wpages) {
                         singlePageHeroTextButtonText: wpage.acf.single_page_content.hero.buttons.text_button.text,
                         singlePageHeroTextButtonLink: wpage.acf.single_page_content.hero.buttons.text_button.link,
                         singlePageActivityImgs: wpage.acf.single_page_content.activity_photos,
-                        weight: wpage.acf.listing_weight,
+                        weight: wpage.acf.listing_weight
                     };
                 } else {
                     return await {
@@ -204,7 +207,7 @@ async function processPages(wpages) {
                         singlePageHeroTextButtonText: wpage.acf.single_page_content.hero.buttons.text_button.text,
                         singlePageHeroTextButtonLink: wpage.acf.single_page_content.hero.buttons.text_button.link,
                         singlePageActivityImgs: wpage.acf.single_page_content.activity_photos,
-                        weight: randomNumber(999, 99999),
+                        weight: '999'
                     };
                 }
             } else if (wpage.template == "templates/programs.php") {
@@ -219,6 +222,7 @@ async function processPages(wpages) {
                     heroParagraph: wpage.acf.hero.paragraph,
                     heroButtonText: wpage.acf.hero.button.text,
                     heroButtonLink: wpage.acf.hero.button.link,
+                    weight: '999'
                 };
             } else {
                 return await {
@@ -228,6 +232,7 @@ async function processPages(wpages) {
                     slug: wpage.slug,
                     yoast: wpage.yoast_head,
                     template: wpage.template,
+                    weight: '999'
                 };
             }
         })

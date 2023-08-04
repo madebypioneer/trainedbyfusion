@@ -245,6 +245,17 @@ button:hover {
     color: #0B141E;
 }
 
+.outline-green-button {
+    background-color: transparent;
+    box-shadow:inset 0px 0px 0px 1px #0DD63C;
+    color: #ffffff;
+}
+
+.outline-green-button:hover {
+    background-color: #0DD63C;
+    color: #0B141E;
+}
+
 .text-button {
     background-color: transparent;
     color: #0B141E;

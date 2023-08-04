@@ -1,14 +1,78 @@
 <style>
-.home-hero {
-    background-image: url('{{ homePage.heroImg }}');background-image: linear-gradient(to bottom , rgba(24, 44, 68, 0.90) 90%, rgba(24, 44, 68, 0.70) 100%), url('{{ homePage.heroImg }}');
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.hero-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-image: linear-gradient(to bottom , rgba(24, 44, 68, 0.90) 90%, rgba(24, 44, 68, 0.70) 100%);
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    background-image: linear-gradient(to bottom , rgba(24, 44, 68, 0.90) 90%, rgba(24, 44, 68, 0.70) 100%);
+}
+.hero-pretitle {
+    font-family: 'revolution-gothic', sans-serif;
+    font-weight: 600;
+}
+.hero-button-group {
+    gap: 20px;
+    justify-content: center;
 }
 </style>
 
-<div class="w-full bg-cover bg-center xxxl:bg-bottom text-center -mt-32 pt-64 pb-40 lg:pb-56 home-hero" alt="{{ homePage.heroAlt }}">
-    <h1 class="xxl:text-9xl text-white pb-8 lg:pb-4">{{ homePage.heroTitle }}</h1>
-    <a href="{{ homePage.heroButtonLink }}">
-        <button class="lg-button green-button">{{ homePage.heroButtonText }}</button>
-    </a>
+<div class="relative w-full bg-cover bg-center xxxl:bg-bottom text-center -mt-32 pt-64 pb-40 lg:pb-56 home-hero">
+    <div class="hero-gradient"></div>
+    {% if homePage.acf.hero.image_or_video_background == "Image" %}
+    <img src="{{ homePage.heroImg }}" class="hero-image" alt="{{ homePage.heroAlt }}" />
+    {% endif %}
+    {% if homePage.acf.hero.image_or_video_background == "Video" %}
+    <video autoplay muted loop class="hero-video">
+        <source src="{{ homePage.acf.hero.video_background.url }}" type="video/mp4">
+    </video>
+    {% endif %}
+    <div class="hero-content">
+        {% if homePage.acf.hero.pretitle %}
+        <h6 class="text-2xl text-white pb-4 hero-pretitle">{{ homePage.acf.hero.pretitle }}</h6>
+        {% endif %}
+        <h1 class="text-6xl xxl:text-7xl text-white">{{ homePage.acf.hero.title }}</h1>
+        {% if homePage.acf.hero.paragraph %}
+        <p class="text-xl text-white font-thin pt-3">{{ homePage.acf.hero.paragraph }}</p>
+        {% endif %}
+        {% if homePage.acf.hero.button_one.text %}
+        <div class="md:flex pt-8 hero-button-group">
+            <a href="{{ homePage.acf.hero.button_one.link }}">
+                <button class="mb-8 md:mb-0 lg-button green-button">{{ homePage.acf.hero.button_one.text }}</button>
+            </a>
+            {% if homePage.acf.hero.button_two.text %}
+            <a href="{{ homePage.acf.hero.button_two.link }}">
+                <button class="lg-button outline-green-button">{{ homePage.acf.hero.button_two.text }}</button>
+            </a>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
 </div>
 
 <div class="py-5"></div>

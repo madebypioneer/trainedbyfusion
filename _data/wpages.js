@@ -232,6 +232,7 @@ async function processPages(wpages) {
                     slug: wpage.slug,
                     yoast: wpage.yoast_head,
                     template: wpage.template,
+                    acf: wpage.acf,
                     weight: '999'
                 };
             }

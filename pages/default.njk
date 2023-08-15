@@ -27,5 +27,7 @@ permalink: /{{ wpage.slug }}/index.html
         {% include "pages/personal-training.njk" %}
     {% elseif item.template == "templates/thank-you.php" %}
         {% include "pages/thank-you.njk" %}
+    {% elseif item.template == "templates/video-landing-page.php" %}
+        {% include "pages/video-landing-page.njk" %}
     {% endif %}
 {% endfor -%}

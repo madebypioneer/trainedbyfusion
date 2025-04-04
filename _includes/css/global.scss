@@ -401,6 +401,14 @@ img {
     width: 75% !important;
 }
 
+.modal__container {
+    max-height: 90vh !important;
+}
+
+.ep-iFrameLarge {
+    height: 90vh !important;
+}
+
 .flickity-enabled {}; 
 .is-draggable {};
 .flickity-viewport {};

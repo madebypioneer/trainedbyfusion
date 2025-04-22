@@ -16,6 +16,14 @@ MicroModal.init({
 	disableScroll: true
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get("gad") === "true") {
+    // Open the modal
+    MicroModal.show('sign-up-modal');
+  }
+});
+
 const bodyTag = document.body;
 const headerContainer = document.getElementById("header-container");
 const mobileMenuWithChildren = document.querySelectorAll('.mobile-menu-with-children');
